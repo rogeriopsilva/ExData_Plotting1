@@ -15,11 +15,13 @@ subdf<-df[strptime(df[,1],"%d/%m/%Y")>="2007-02-01 GMT" & strptime(df[,1],"%d/%m
 rm(df)			#to free memory
 subdf<-subdf[complete.cases(subdf),]
 
-#four graphics in one device
-par(mfrow=c(2,2))
-png("plot4.png")
 #Output to a file
 #The default is width = 480, height = 480, units = "px"
+png("plot4.png")
+
+#four graphics in one device
+par(mfrow=c(2,2))
+
 
 #plots the graphics
 with(subdf,{

@@ -14,11 +14,12 @@ subdf<-df[strptime(df[,1],"%d/%m/%Y")>="2007-02-01" & strptime(df[,1],"%d/%m/%Y"
 subdf<-subdf[complete.cases(subdf),]
 
 
-#one graphic in one device
-par(mfrow=c(1,1))
-png("plot1.png")
 #output to a file
 #The default is width = 480, height = 480, units = "px"
+png("plot1.png")
+
+#one graphic in one device
+par(mfrow=c(1,1))
 
 hist(subdf[,3],col="red", xlab="Global Active Power (kilowatts)",main="Global Active Power")
 

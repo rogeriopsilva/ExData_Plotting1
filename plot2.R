@@ -17,11 +17,13 @@ subdf<-subdf[complete.cases(subdf),]
 
 
 
-#one graphic in one device
-par(mfrow=c(1,1))
-png("plot2.png")
+
 #output to a file
 #The default is width = 480, height = 480, units = "px"
+png("plot2.png")
+
+#one graphic in one device
+par(mfrow=c(1,1))
 
 plot(strptime(paste(subdf[,1],subdf[,2]),"%d/%m/%Y %H:%M:%S"),subdf[,3],type="l",xlab="",ylab="Global Active Power (kilowatts)")
 
