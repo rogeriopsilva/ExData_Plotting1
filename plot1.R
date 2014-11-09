@@ -16,12 +16,13 @@ subdf<-subdf[complete.cases(subdf),]
 
 #one graphic in one device
 par(mfrow=c(1,1))
+png("plot1.png")
+#output to a file
+#The default is width = 480, height = 480, units = "px"
 
 hist(subdf[,3],col="red", xlab="Global Active Power (kilowatts)",main="Global Active Power")
 
-#output to a file
-#The default is width = 480, height = 480, units = "px"
-dev.copy(png,file="plot1.png")
+
 dev.off()
 
 

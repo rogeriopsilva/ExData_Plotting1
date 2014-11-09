@@ -17,6 +17,9 @@ subdf<-subdf[complete.cases(subdf),]
 
 #four graphics in one device
 par(mfrow=c(2,2))
+png("plot4.png")
+#Output to a file
+#The default is width = 480, height = 480, units = "px"
 
 #plots the graphics
 with(subdf,{
@@ -29,9 +32,7 @@ with(subdf,{
 	plot(strptime(paste(subdf[,1],subdf[,2]),"%d/%m/%Y %H:%M:%S"),subdf[,4],type="l",xlab="datetime",ylab="Global_reactive_power")
 	})
 
-#Output to a file
-#The default is width = 480, height = 480, units = "px"
-dev.copy(png,file="plot4.png")
+
 dev.off()
 
 #changes time settings back to original settings
