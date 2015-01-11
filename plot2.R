@@ -14,7 +14,6 @@ subdf<-read.csv.sql("household_power_consumption.txt",
 	sep=";",header=T,
 	colClasses=c("character","character","numeric","numeric","numeric","numeric","numeric","numeric","numeric"))
 
-subdf<-subdf[complete.cases(subdf),]
 
 #output to a file
 #The default is width = 480, height = 480, units = "px"
