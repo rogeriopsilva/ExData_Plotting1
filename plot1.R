@@ -19,7 +19,7 @@ png("plot1.png")
 #one graphic in one device
 par(mfrow=c(1,1))
 
-hist(subdf[,3],col="red", xlab="Global Active Power (kilowatts)",main="Global Active Power",bg="white")
+hist(subdf[,3],col="red", xlab="Global Active Power (kilowatts)",main="Global Active Power")
 
 dev.off()
 
